@@ -1,5 +1,230 @@
 <!DOCTYPE html>
 <html lang="de">
-<!-- Der komplette HTML-Inhalt kommt hier rein -->
-<!-- Wegen Länge ausgelassen, siehe Canvas -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feldliebe Deutschland</title>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/bundled/lenis.min.js"></script>
+  <style>
+    :root {
+      --green-dark: #2a6e3f;
+      --green-mid: #4a9d4e;
+      --green-light: #7ac943;
+      --sky: #77c2d3;
+      --text-light: #e9fff3;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3fef6;
+      color: #1e3c2b;
+      overflow-x: hidden;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--sky);
+      padding: 1rem 2rem;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--green-dark);
+    }
+    nav .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--green-dark);
+    }
+    nav .logo img {
+      height: 40px;
+      margin-right: 0.5rem;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      background: var(--green-dark);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover {
+      background: var(--green-mid);
+    }
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to bottom right, var(--sky), #e1f7eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero-content {
+      animation: fadeIn 2s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(40px); }
+    }
+    .headline {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--green-dark);
+    }
+    .subtext {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: var(--green-mid);
+    }
+    .scroll-fade-text {
+      font-size: 2.5vw;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #a0b9a6;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10vh 2rem;
+    }
+    .scroll-fade-text span {
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+    .scroll-fade-text span.visible {
+      color: var(--green-dark);
+    }
+    .section {
+      padding: 5rem 2rem;
+      background: #e6f9e8;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--green-dark);
+    }
+    .projects, .features {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .project-card, .feature-card {
+      flex: 1 1 250px;
+      background: #f6f2e8;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .feature-badge {
+      background: var(--green-dark);
+      color: white;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: var(--green-dark);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="/mnt/data/image.png" alt="Feldliebe Logo"> Feldliebe
+    </div>
+    <ul>
+      <li><a href="#">Start</a></li>
+      <li><a href="#">Leistungen</a></li>
+      <li><a href="#">Referenzen</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="headline">Für eine starke Landwirtschaft</h1>
+      <p class="subtext">Nachhaltige Dienstleistungen für Felder, Höfe und die Zukunft</p>
+    </div>
+  </header>
+
+  <section class="scroll-fade-text" id="animatedText">
+    Die Landwirtschaft in Deutschland steht vor großen Herausforderungen. Klimawandel, Bodenschutz und effiziente Bewirtschaftung verlangen neue Lösungen. Wir unterstützen Landwirte mit nachhaltigen Dienstleistungen auf dem Feld und im Betrieb.
+  </section>
+
+  <section class="section features">
+    <h2>Unsere Leistungen</h2>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-badge">100%</div>
+        <h3>Bodenbearbeitung</h3>
+        <p>Effizient und bodenschonend für langfristige Fruchtbarkeit.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-badge">100%</div>
+        <h3>Aussaat & Düngung</h3>
+        <p>Präzise Ausbringung für hohe Erträge und Umweltfreundlichkeit.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-badge">100%</div>
+        <h3>Beratung & Analyse</h3>
+        <p>Individuelle Lösungen und Planung für Ihren Betrieb.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Feldliebe Deutschland. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script>
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    const animatedText = document.getElementById('animatedText');
+    const textContent = animatedText.textContent;
+    animatedText.innerHTML = '';
+    [...textContent].forEach(char => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      animatedText.appendChild(span);
+    });
+    function updateTextVisibility() {
+      const spans = animatedText.querySelectorAll('span');
+      const rect = animatedText.getBoundingClientRect();
+      spans.forEach((span, i) => {
+        const offset = rect.top + span.offsetLeft * 0.3;
+        if (offset < window.innerHeight * 0.8) {
+          span.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', updateTextVisibility);
+    window.addEventListener('load', updateTextVisibility);
+  </script>
+</body>
 </html>
