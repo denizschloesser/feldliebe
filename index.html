@@ -34,17 +34,28 @@
 </section>
   
 <section style="padding: 2rem 0; background: #ffffff; overflow: hidden;">
-  <div style="white-space: nowrap; animation: scrollSliderCircle 40s linear infinite; display: flex; gap: 2rem; align-items: center;">
-    <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Slider 1" style="height: 200px; width: 200px; border-radius: 50%; object-fit: cover; display: inline-block;">
-    <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Slider 2" style="height: 200px; width: 200px; border-radius: 50%; object-fit: cover; display: inline-block;">
-    <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Slider 3" style="height: 200px; width: 200px; border-radius: 50%; object-fit: cover; display: inline-block;">
-    <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Slider 4" style="height: 200px; width: 200px; border-radius: 50%; object-fit: cover; display: inline-block;">
-    <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Slider 5" style="height: 200px; width: 200px; border-radius: 50%; object-fit: cover; display: inline-block;">
+  <div style="white-space: nowrap; animation: scrollSliderHeart 40s linear infinite; display: flex; gap: 2rem; align-items: center;">
+    <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Herz 1" class="heart-img">
+    <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Herz 2" class="heart-img">
+    <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Herz 3" class="heart-img">
+    <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Herz 4" class="heart-img">
+    <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Herz 5" class="heart-img">
   </div>
   <style>
-    @keyframes scrollSliderCircle {
+    @keyframes scrollSliderHeart {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
+    }
+    .heart-img {
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+      display: inline-block;
+      clip-path: path('M100,30 C85,-5 0,0 0,70 C0,130 100,180 100,180 C100,180 200,130 200,70 C200,0 115,-5 100,30 Z');
+      transition: transform 0.3s ease;
+    }
+    .heart-img:hover {
+      transform: scale(1.05);
     }
   </style>
 </section>
