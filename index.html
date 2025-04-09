@@ -5,133 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feldliebe Deutschland</title>
   <style>
-    :root {
-      --green-dark: #2a6e3f;
-      --green-mid: #4a9d4e;
-      --sky: #77c2d3;
-    }
     body {
       font-family: sans-serif;
       background: #f3fef6;
       margin: 0;
     }
-    nav {
-      background: var(--sky);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: bold;
-    }
     h1, h2 {
       text-align: center;
-      color: var(--green-dark);
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 5rem 2rem;
-    }
-    .feature-card {
-      background: #f6fef9;
-      border: 1px solid #e0f1e5;
-      border-radius: 16px;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
-    .feature-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .feature-card p {
-      font-size: 0.95rem;
-      color: #444;
-    }
-    .feature-card div {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    footer {
-      background: var(--green-dark);
-      color: white;
-      text-align: center;
-      padding: 2rem;
     }
   </style>
 </head>
 <body>
+  
+<header style="padding: 5rem 2rem; text-align: center; background: #e6f9e8;">
+  <h1 style="color: #2a6e3f; font-size: 2.5rem;">Für eine starke Landwirtschaft</h1>
+  <p style="color: #4a9d4e; font-size: 1.2rem;">Nachhaltige Dienstleistungen für Felder, Höfe und die Zukunft</p>
+</header>
 
-  <nav>
-    <div>Feldliebe</div>
-    <div>Menü</div>
-  </nav>
+<section style="padding: 2rem 0; background: #ffffff; overflow: hidden;">
+  <div style="white-space: nowrap; animation: scrollSlider 40s linear infinite;">
+    <img src="https://cdn.prod.website-files.com/6733a9fa15c9b31fb9dd058e/673a406968dbde8a8ab1458a_PHOTO-2024-02-05-11-14-16%205%20(1).webp" alt="Slider 1" style="height: 250px; margin-right: 2rem; display: inline-block;">
+    <img src="https://cdn.prod.website-files.com/6733a9fa15c9b31fb9dd058e/673a408fa8de37d4fb15af18_LVH0I6CF_output_0_LE_auto_x2.webp" alt="Slider 2" style="height: 250px; margin-right: 2rem; display: inline-block;">
+    <img src="https://cdn.prod.website-files.com/6733a9fa15c9b31fb9dd058e/673a40990b330ab2994fc199_PHOTO-2024-02-05-11-14-16%206%20(1).webp" alt="Slider 3" style="height: 250px; margin-right: 2rem; display: inline-block;">
+    <img src="https://cdn.prod.website-files.com/6733a9fa15c9b31fb9dd058e/673a40a38783fc08be0b2435_PHOTO-2024-02-05-11-14-16%207.webp" alt="Slider 4" style="height: 250px; margin-right: 2rem; display: inline-block;">
+    <img src="https://cdn.prod.website-files.com/6733a9fa15c9b31fb9dd058e/673a406968dbde8a8ab1458a_PHOTO-2024-02-05-11-14-16%205%20(1).webp" alt="Slider 1" style="height: 250px; margin-right: 2rem; display: inline-block;">
+    <img src="https://cdn.prod.website-files.com/6733a9fa15c9b31fb9dd058e/673a408fa8de37d4fb15af18_LVH0I6CF_output_0_LE_auto_x2.webp" alt="Slider 2" style="height: 250px; margin-right: 2rem; display: inline-block;">
+    <img src="https://cdn.prod.website-files.com/6733a9fa15c9b31fb9dd058e/673a40990b330ab2994fc199_PHOTO-2024-02-05-11-14-16%206%20(1).webp" alt="Slider 3" style="height: 250px; margin-right: 2rem; display: inline-block;">
+    <img src="https://cdn.prod.website-files.com/6733a9fa15c9b31fb9dd058e/673a40a38783fc08be0b2435_PHOTO-2024-02-05-11-14-16%207.webp" alt="Slider 4" style="height: 250px; margin-right: 2rem; display: inline-block;">
+  </div>
+  <style>
+    @keyframes scrollSlider {
+      0% {{ transform: translateX(0); }}
+      100% {{ transform: translateX(-50%); }}
+    }}
+  </style>
+</section>
 
-  <header style="padding: 5rem 2rem;">
-    <h1>Für eine starke Landwirtschaft</h1>
-    <p style="color: var(--green-mid); text-align: center;">
-      Nachhaltige Dienstleistungen für Felder, Höfe und die Zukunft
-    </p>
-  </header>
-
-  <section>
-    <h2>Unsere Leistungen</h2>
-    <div class="features">
-      <div class="feature-card">
-        <div>🌱</div>
-        <h3>Unkraut hacken</h3>
-        <p>Mechanische Unkrautregulierung für gesunde Bestände.</p>
-      </div>
-      <div class="feature-card">
-        <div>🔍</div>
-        <h3>Selektierarbeiten</h3>
-        <p>Manuelle Ernteauslese und Kontrolle auf dem Feld.</p>
-      </div>
-      <div class="feature-card">
-        <div>🐭</div>
-        <h3>Mäusebekämpfung</h3>
-        <p>Effektive Maßnahmen zur Schadnagerkontrolle.</p>
-      </div>
-      <div class="feature-card">
-        <div>🥔</div>
-        <h3>Kartoffeln sortieren</h3>
-        <p>Saubere Trennung nach Größe und Qualität.</p>
-      </div>
-      <div class="feature-card">
-        <div>🧱</div>
-        <h3>Silo abdecken</h3>
-        <p>Sicher und wetterfest für optimale Silagequalität.</p>
-      </div>
-      <div class="feature-card">
-        <div>🪨</div>
-        <h3>Steine lesen</h3>
-        <p>Schonende Flächenvorbereitung für das Saatbett.</p>
-      </div>
-      <div class="feature-card">
-        <div>🌾</div>
-        <h3>Saatvermehrung</h3>
-        <p>Qualitätsproduktion mit Fachwissen und Kontrolle.</p>
-      </div>
-      <div class="feature-card">
-        <div>🧼</div>
-        <h3>Reinigungsarbeiten</h3>
-        <p>Sauberkeit auf Wegen und Feldern für nachhaltiges Arbeiten.</p>
-      </div>
-      <div class="feature-card">
-        <div>✨</div>
-        <h3>…und vieles mehr!</h3>
-        <p>Wir sind flexibel, tatkräftig und immer einsatzbereit.</p>
-      </div>
+<section class="section features" style="background: #ffffff; padding: 5rem 2rem;">
+  <h2 style="color: #2a6e3f; margin-bottom: 3rem; font-size: 2.5rem;">Unsere Leistungen</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+    <div style="background: #f6fef9; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center;">
+      <div style="font-size: 2rem;">🌱</div>
+      <h3>Unkraut hacken</h3>
+      <p>Mechanische Unkrautregulierung für gesunde Bestände.</p>
     </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Feldliebe Deutschland – Alle Rechte vorbehalten
-  </footer>
+    <!-- Weitere Kacheln würden hier folgen ... -->
+  </div>
+</section>
 
 </body>
 </html>
