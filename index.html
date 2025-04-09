@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feldliebe Deutschland</title>
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/bundled/lenis.min.js"></script>
   <style>
@@ -113,7 +113,7 @@
       margin-bottom: 1rem;
       color: var(--green-dark);
     }
-    .features {
+    .projects, .features {
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
@@ -146,6 +146,25 @@
       font-size: 0.9rem;
       color: #fff;
     }
+    .slider {
+      overflow: hidden;
+      max-width: 100%;
+      position: relative;
+    }
+    .slider-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 40s linear infinite;
+    }
+    .slider-track img {
+      height: 300px;
+      margin-right: 2rem;
+      border-radius: 12px;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
   </style>
 </head>
 <body>
@@ -175,50 +194,26 @@
   <section class="section features">
     <h2>Unsere Leistungen</h2>
     <div class="features">
-      <div class="feature-card">
-        <div class="feature-badge">🌱</div>
-        <h3>Unkraut hacken</h3>
-        <p>Mechanische Unkrautregulierung für gesunde Bestände.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-badge">🔍</div>
-        <h3>Selektierarbeiten</h3>
-        <p>Manuelle Ernteauslese und Kontrolle auf dem Feld.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-badge">🐭</div>
-        <h3>Mäusebekämpfung</h3>
-        <p>Effektive Maßnahmen zur Schadnagerkontrolle.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-badge">🥔</div>
-        <h3>Kartoffeln sortieren</h3>
-        <p>Saubere Trennung nach Größe und Qualität.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-badge">🧱</div>
-        <h3>Silo abdecken</h3>
-        <p>Sicher und wetterfest für optimale Silagequalität.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-badge">🪨</div>
-        <h3>Steine lesen</h3>
-        <p>Schonende Flächenvorbereitung für Saatbett.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-badge">🌾</div>
-        <h3>Saatvermehrung</h3>
-        <p>Qualitätsproduktion mit Fachwissen und Kontrolle.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-badge">🧼</div>
-        <h3>Reinigungsarbeiten</h3>
-        <p>Sauberkeit auf Wegen und Feldern für nachhaltiges Arbeiten.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-badge">✨</div>
-        <h3>…und vieles mehr!</h3>
-        <p>Wir sind flexibel, tatkräftig und immer einsatzbereit.</p>
+      <div class="feature-card"><div class="feature-badge">🌱</div><h3>Unkraut hacken</h3><p>Mechanische Unkrautregulierung für gesunde Bestände.</p></div>
+      <div class="feature-card"><div class="feature-badge">🔍</div><h3>Selektierarbeiten</h3><p>Manuelle Ernteauslese und Kontrolle auf dem Feld.</p></div>
+      <div class="feature-card"><div class="feature-badge">🐭</div><h3>Mäusebekämpfung</h3><p>Effektive Maßnahmen zur Schadnagerkontrolle.</p></div>
+      <div class="feature-card"><div class="feature-badge">🥔</div><h3>Kartoffeln sortieren</h3><p>Saubere Trennung nach Größe und Qualität.</p></div>
+      <div class="feature-card"><div class="feature-badge">🧱</div><h3>Silo abdecken</h3><p>Sicher und wetterfest für optimale Silagequalität.</p></div>
+      <div class="feature-card"><div class="feature-badge">🪨</div><h3>Steine lesen</h3><p>Schonende Flächenvorbereitung für Saatbett.</p></div>
+      <div class="feature-card"><div class="feature-badge">🌾</div><h3>Saatvermehrung</h3><p>Qualitätsproduktion mit Fachwissen und Kontrolle.</p></div>
+      <div class="feature-card"><div class="feature-badge">🧼</div><h3>Reinigungsarbeiten</h3><p>Sauberkeit auf Wegen und Feldern für nachhaltiges Arbeiten.</p></div>
+      <div class="feature-card"><div class="feature-badge">✨</div><h3>…und vieles mehr!</h3><p>Wir sind flexibel, tatkräftig und immer einsatzbereit.</p></div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #f6f2e8; padding: 4rem 2rem;">
+    <h2 style="color: var(--green-dark); margin-bottom: 2rem;">Einblicke in unsere Arbeit</h2>
+    <div class="slider">
+      <div class="slider-track">
+        <img src="https://cdn.prod.website-files.com/...1.webp" alt="Feldarbeit">
+        <img src="https://cdn.prod.website-files.com/...2.webp" alt="Maschine">
+        <img src="https://cdn.prod.website-files.com/...3.webp" alt="Ernte">
+        <img src="https://cdn.prod.website-files.com/...4.webp" alt="Feldteam">
       </div>
     </div>
   </section>
