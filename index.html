@@ -32,7 +32,22 @@
     <p style="font-size: 1.25rem; max-width: 600px;">Nachhaltige Dienstleistungen für Felder, Höfe und die Zukunft</p>
   </div>
 </section>
-  
+
+<section style="padding: 5rem 2rem; background: #121d14; min-height: 100vh; display: flex; align-items: center;">
+  <h2 id="scroll-text" style="font-size: 2.5rem; font-weight: 600; line-height: 1.4; color: #c6f3c4; max-width: 1000px; margin: 0 auto; transition: color 0.3s ease;">
+    Die ökologische Situation wird zunehmend kritischer. Herausforderungen im Pflanzenschutz, Schädlingsdruck und Umwelteinflüsse erreichen neue Schwellenwerte. Der Bedarf an nachhaltigen Lösungen war noch nie so dringend.
+  </h2>
+  <script>
+    const scrollText = document.getElementById("scroll-text");
+    window.addEventListener("scroll", () => {
+      const section = scrollText.parentElement;
+      const { top, height } = section.getBoundingClientRect();
+      const percentage = Math.max(0, Math.min(1, 1 - top / height));
+      scrollText.style.color = `rgb(${198 - percentage * 100}, ${243 - percentage * 100}, ${196 - percentage * 100})`;
+    });
+  </script>
+</section>
+
 <section style="padding: 2rem 0; background: #ffffff; overflow: hidden;">
   <div style="white-space: nowrap; animation: scrollSliderHeart 40s linear infinite; display: flex; gap: 2rem; align-items: center;">
     <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Herz 1" class="heart-img">
