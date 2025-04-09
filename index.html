@@ -4,17 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feldliebe Deutschland</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Barlow', sans-serif;
       background: #f3fef6;
       margin: 0;
     }
+
+    p, a, button, li, span, div {
+      font-family: 'Barlow', sans-serif;
+    }
     h1, h2, h3 {
-      font-family: 'Anton', sans-serif;
+      font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      font-weight: 700;
     }
     h1, h2 {
       text-align: center;
@@ -43,10 +48,45 @@
     font-weight: 500;
   ">
     <div style="font-size: 1.2rem;">Feldliebe</div>
-    <div style="display: flex; gap: 1.5rem;">
-      <a href=\"#leistungen\" style=\"text-decoration: none; color: white;\">Leistungen</a>
-      <a href=\"#kontakt\" style=\"text-decoration: none; color: white;\">Kontakt</a>
+    <div style="position: relative;">
+  <div style="display: flex; gap: 1.5rem;">
+    <div style="position: relative;">
+      <a href="#leistungen" style="text-decoration: none; color: white; font-weight: 600; font-family: 'Oswald', sans-serif; text-transform: uppercase;">Leistungen</a>
+      <div class=\"mega-menu\" style=\"display: none; position: fixed; top: 60px; left: 0; background: white; color: #121d14; padding: 2rem 5vw; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100vw; grid-template-columns: repeat(2, 1fr); gap: 2rem; z-index: 998;\">
+        <div>
+          <h4 style="margin-top: 0; font-family: 'Oswald'; font-weight: bold; font-size: 1rem; text-transform: uppercase;">Feldarbeiten</h4>
+          <ul style="list-style: none; padding-left: 0;">
+            <li>Unkraut hacken</li>
+            <li>Steine lesen</li>
+            <li>Saatvermehrung</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin-top: 0; font-family: 'Oswald'; font-weight: bold; font-size: 1rem; text-transform: uppercase;">Lager & Ernte</h4>
+          <ul style="list-style: none; padding-left: 0;">
+            <li>Kartoffeln sortieren</li>
+            <li>Silo abdecken</li>
+            <li>Reinigungsarbeiten</li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <a href="#kontakt" style="text-decoration: none; color: white; font-weight: 600; font-family: 'Oswald', sans-serif; text-transform: uppercase;">Kontakt</a>
+  </div>
+</div>
+<style>
+  nav a[href='#leistungen']:hover + .mega-menu {
+  display: grid !important;
+}
+  .mega-menu li {
+    padding: 0.25rem 0;
+    font-family: 'Barlow';
+  }
+  .mega-menu li:hover {
+    color: #2a6e3f;
+    cursor: pointer;
+  }
+</style>
   </div>
 </nav>
 
@@ -64,18 +104,29 @@
 </section>
 
 <section style="padding: 5rem 2rem; background: #121d14; min-height: 100vh; display: flex; align-items: center;">
-  <h2 id="scroll-text" style="font-size: 2.5rem; font-weight: 600; line-height: 1.4; color: #c6f3c4; max-width: 1000px; margin: 0 auto; transition: color 0.3s ease;">
-    Die ökologische Situation wird zunehmend kritischer. Herausforderungen im Pflanzenschutz, Schädlingsdruck und Umwelteinflüsse erreichen neue Schwellenwerte. Der Bedarf an nachhaltigen Lösungen war noch nie so dringend.
-  </h2>
+  <div id="scroll-text" style="font-size: 2.5rem; font-weight: 600; line-height: 1.4; color: #c6f3c4; max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; transition: color 0.3s ease;">
+  <span class="scroll-line" style="opacity: 0; transform: translateX(-30px); transition: all 0.6s ease;">Die ökologische Situation wird zunehmend kritischer.</span>
+  <span class="scroll-line" style="opacity: 0; transform: translateX(-30px); transition: all 0.6s ease 0.2s;">Herausforderungen im Pflanzenschutz, Schädlingsdruck und Umwelteinflüsse erreichen neue Schwellenwerte.</span>
+  <span class="scroll-line" style="opacity: 0; transform: translateX(-30px); transition: all 0.6s ease 0.4s;">Der Bedarf an nachhaltigen Lösungen war noch nie so dringend.</span>
+</div>
   <script>
-    const scrollText = document.getElementById("scroll-text");
-    window.addEventListener("scroll", () => {
-      const section = scrollText.parentElement;
-      const { top, height } = section.getBoundingClientRect();
-      const percentage = Math.max(0, Math.min(1, 1 - top / height));
-      scrollText.style.color = `rgb(${198 - percentage * 100}, ${243 - percentage * 100}, ${196 - percentage * 100})`;
-    });
-  </script>
+  const lines = document.querySelectorAll(".scroll-line");
+  const section = document.getElementById("scroll-text").parentElement;
+
+  function animateLines() {
+    const { top, height } = section.getBoundingClientRect();
+    const triggerPoint = window.innerHeight * 0.8;
+    if (top < triggerPoint) {
+      lines.forEach(line => {
+        line.style.opacity = 1;
+        line.style.transform = "translateX(0)";
+      });
+    }
+  }
+
+  window.addEventListener("scroll", animateLines);
+  window.addEventListener("load", animateLines);
+</script>
 </section>
 
 <section style="padding: 2rem 0; background: #ffffff; overflow: hidden;">
@@ -185,5 +236,24 @@
   </div>
 </section>
 
+<!-- Call-to-Action Bereich -->
+<section style="padding: 5rem 2rem; background: #2a6e3f; color: white; text-align: center;">
+  <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Bereit, loszulegen?</h2>
+  <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem;">
+    Gemeinsam machen wir dein Feld zukunftsfähig. Lass uns über deine Anforderungen sprechen.
+  </p>
+  <a href="#kontakt" style="background: white; color: #2a6e3f; padding: 1rem 2rem; font-weight: bold; border-radius: 6px; text-decoration: none; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Jetzt Kontakt aufnehmen</a>
+</section>
+
+<!-- Kontaktformular -->
+<section id="kontakt" style="padding: 5rem 2rem; background: #fefefe;">
+  <h2 style="text-align: center; color: #2a6e3f; font-size: 2.5rem; margin-bottom: 2rem;">Kontakt</h2>
+  <form style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+    <input type="text" name="name" placeholder="Dein Name" required style="padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
+    <input type="email" name="email" placeholder="Deine E-Mail" required style="padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
+    <textarea name="nachricht" placeholder="Deine Nachricht" rows="5" required style="padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+    <button type="submit" style="background: #2a6e3f; color: white; padding: 1rem; border: none; border-radius: 6px; font-size: 1rem; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;">Senden</button>
+  </form>
+</section>
 </body>
 </html>
