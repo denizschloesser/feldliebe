@@ -27,6 +27,8 @@
   </style>
 </head>
 <body>
+
+<!-- ===== Navigationsmenü ===== -->
   
 <nav style="
   position: fixed;
@@ -51,31 +53,14 @@
     <div style="position: relative;">
   <div style="display: flex; gap: 1.5rem;">
     <div style="position: relative;">
-      <a href="#leistungen" style="text-decoration: none; color: white; font-weight: 600; font-family: 'Oswald', sans-serif; text-transform: uppercase;">Leistungen</a>
-      <div class=\"mega-menu\" style=\"display: none; position: fixed; top: 60px; left: 0; background: white; color: #121d14; padding: 2rem 5vw; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100vw; grid-template-columns: repeat(2, 1fr); gap: 2rem; z-index: 998;\">
-        <div>
-          <h4 style="margin-top: 0; font-family: 'Oswald'; font-weight: bold; font-size: 1rem; text-transform: uppercase;">Feldarbeiten</h4>
-          <ul style="list-style: none; padding-left: 0;">
-            <li>Unkraut hacken</li>
-            <li>Steine lesen</li>
-            <li>Saatvermehrung</li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="margin-top: 0; font-family: 'Oswald'; font-weight: bold; font-size: 1rem; text-transform: uppercase;">Lager & Ernte</h4>
-          <ul style="list-style: none; padding-left: 0;">
-            <li>Kartoffeln sortieren</li>
-            <li>Silo abdecken</li>
-            <li>Reinigungsarbeiten</li>
-          </ul>
-        </div>
-      </div>
+      <a href="#leistungen" style="text-decoration: none; color: white; font-weight: 600; font-family: 'Barlow', sans-serif; text-transform: uppercase;">Leistungen</a>
+          
     </div>
-    <a href="#kontakt" style="text-decoration: none; color: white; font-weight: 600; font-family: 'Oswald', sans-serif; text-transform: uppercase;">Kontakt</a>
+    <a href="#kontakt" style="text-decoration: none; color: white; font-weight: 600; font-family: 'Barlow', sans-serif; text-transform: uppercase;">Kontakt</a>
   </div>
 </div>
 <style>
-  nav a[href='#leistungen']:hover + .mega-menu {
+  nav div:hover .mega-menu {
   display: grid !important;
 }
   .mega-menu li {
@@ -92,19 +77,22 @@
 
 
 
-<section style="position: relative; height: 100vh; overflow: hidden;">
+<!-- ===== Hero-Bereich mit Video ===== -->
+<section style="position: relative; height: 100vh; overflow: hidden;" aria-label="Hero">
   <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
     <source src="https://cdn.pixabay.com/video/2023/08/09/175305-853206002_large.mp4" type="video/mp4">
     Dein Browser unterstützt dieses Video nicht.
   </video>
   <div style="position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; text-align: center; color: white; background: rgba(0,0,0,0.3);">
     <h1 style="font-size: 3rem; margin-bottom: 1rem;">Für das Herz des Landes</h1>
-    <p style="font-size: 1.25rem; max-width: 600px;">Nachhaltige Dienstleistungen für Felder, Höfe und die Zukunft</p>
+    <p style="font-size: 1.25rem; max-width: 600px; margin-bottom: 2rem;">Nachhaltige Dienstleistungen für Felder, Höfe und die Zukunft</p>
+<a href="#kontakt" style="background: #ffffff; color: #2a6e3f; padding: 0.8rem 2rem; font-weight: bold; border-radius: 6px; text-decoration: none; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Jetzt anfragen</a>
   </div>
 </section>
 
+<!-- ===== Scrolltext-Effekt ===== -->
 <section style="padding: 5rem 2rem; background: #121d14; min-height: 100vh; display: flex; align-items: center;">
-  <div id="scroll-text" style="font-size: 2.5rem; font-weight: 600; line-height: 1.4; color: #c6f3c4; max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; transition: color 0.3s ease;">
+  <div id="scroll-text" style="font-size: 2.5rem; font-weight: 600; line-height: 1.4; color: #c6f3c4; max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; transition: color 0.3s ease; font-family: 'Oswald', sans-serif;">
   <span class="scroll-line" style="opacity: 0; transform: translateX(-30px); transition: all 0.6s ease;">Die ökologische Situation wird zunehmend kritischer.</span>
   <span class="scroll-line" style="opacity: 0; transform: translateX(-30px); transition: all 0.6s ease 0.2s;">Herausforderungen im Pflanzenschutz, Schädlingsdruck und Umwelteinflüsse erreichen neue Schwellenwerte.</span>
   <span class="scroll-line" style="opacity: 0; transform: translateX(-30px); transition: all 0.6s ease 0.4s;">Der Bedarf an nachhaltigen Lösungen war noch nie so dringend.</span>
@@ -129,6 +117,7 @@
 </script>
 </section>
 
+<!-- ===== Herz-Slider ===== -->
 <section style="padding: 2rem 0; background: #ffffff; overflow: hidden;">
   <div style="white-space: nowrap; animation: scrollSliderHeart 40s linear infinite; display: flex; gap: 2rem; align-items: center;">
     <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Herz 1" class="heart-img">
@@ -139,29 +128,37 @@
   </div>
   <style>
     @keyframes scrollSliderHeart {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .heart-img {
-      height: 200px;
-      width: 200px;
-      object-fit: cover;
-      display: inline-block;
-      clip-path: path('M100,30 C85,-5 0,0 0,70 C0,130 100,180 100,180 C100,180 200,130 200,70 C200,0 115,-5 100,30 Z');
-      transition: transform 0.3s ease;
-    }
-    .heart-img:hover {
-      transform: scale(1.05);
-    }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.heart-img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  display: inline-block;
+  clip-path: path('M100,30 C85,-5 0,0 0,70 C0,130 100,180 100,180 C100,180 200,130 200,70 C200,0 115,-5 100,30 Z');
+  transition: transform 0.3s ease;
+}
+
+.heart-img:hover {
+  transform: scale(1.05);
+}
+
+.white-space: nowrap;
+display: flex;
+justify-content: space-between;
+    
   </style>
 </section>
 
 
-<section style="padding: 5rem 2rem; background: #f3fef6;">
+<!-- ===== Leistungen ===== -->
+<section id="leistungen" style="padding: 5rem 2rem; background: #f3fef6;">
   <h2 style="text-align: center; color: #2a6e3f; font-size: 2.5rem; margin-bottom: 3rem;">Unsere Leistungen</h2>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
 
-    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'; this.querySelector('div').style.background='linear-gradient(135deg, #e4fbe8 0%, #ffffff 100%)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.05)'; this.querySelector('div').style.background='white';">
       <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Unkraut hacken" style="width: 100%; height: 200px; object-fit: cover;">
       <div style="padding: 1.5rem; background: white;">
         <h3 style="color: #2a6e3f;">Unkraut hacken</h3>
@@ -169,7 +166,7 @@
       </div>
     </div>
 
-    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'; this.querySelector('div').style.background='linear-gradient(135deg, #e4fbe8 0%, #ffffff 100%)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.05)'; this.querySelector('div').style.background='white';">
       <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Selektierarbeiten" style="width: 100%; height: 200px; object-fit: cover;">
       <div style="padding: 1.5rem; background: white;">
         <h3 style="color: #2a6e3f;">Selektierarbeiten</h3>
@@ -177,7 +174,7 @@
       </div>
     </div>
 
-    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'; this.querySelector('div').style.background='linear-gradient(135deg, #e4fbe8 0%, #ffffff 100%)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.05)'; this.querySelector('div').style.background='white';"">
       <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Mäusebekämpfung" style="width: 100%; height: 200px; object-fit: cover;">
       <div style="padding: 1.5rem; background: white;">
         <h3 style="color: #2a6e3f;">Mäusebekämpfung</h3>
@@ -185,7 +182,7 @@
       </div>
     </div>
 
-    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'; this.querySelector('div').style.background='linear-gradient(135deg, #e4fbe8 0%, #ffffff 100%)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.05)'; this.querySelector('div').style.background='white';"">
       <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Kartoffeln sortieren" style="width: 100%; height: 200px; object-fit: cover;">
       <div style="padding: 1.5rem; background: white;">
         <h3 style="color: #2a6e3f;">Kartoffeln sortieren</h3>
@@ -193,7 +190,7 @@
       </div>
     </div>
 
-    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'; this.querySelector('div').style.background='linear-gradient(135deg, #e4fbe8 0%, #ffffff 100%)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.05)'; this.querySelector('div').style.background='white';"">
       <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Silo abdecken" style="width: 100%; height: 200px; object-fit: cover;">
       <div style="padding: 1.5rem; background: white;">
         <h3 style="color: #2a6e3f;">Silo abdecken</h3>
@@ -201,7 +198,7 @@
       </div>
     </div>
 
-    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'; this.querySelector('div').style.background='linear-gradient(135deg, #e4fbe8 0%, #ffffff 100%)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.05)'; this.querySelector('div').style.background='white';"">
       <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Steine lesen" style="width: 100%; height: 200px; object-fit: cover;">
       <div style="padding: 1.5rem; background: white;">
         <h3 style="color: #2a6e3f;">Steine lesen</h3>
@@ -209,7 +206,7 @@
       </div>
     </div>
 
-    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'; this.querySelector('div').style.background='linear-gradient(135deg, #e4fbe8 0%, #ffffff 100%)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.05)'; this.querySelector('div').style.background='white';"">
       <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Saatvermehrung" style="width: 100%; height: 200px; object-fit: cover;">
       <div style="padding: 1.5rem; background: white;">
         <h3 style="color: #2a6e3f;">Saatvermehrung</h3>
@@ -217,7 +214,7 @@
       </div>
     </div>
 
-    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'; this.querySelector('div').style.background='linear-gradient(135deg, #e4fbe8 0%, #ffffff 100%)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.05)'; this.querySelector('div').style.background='white';"">
       <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Reinigungsarbeiten" style="width: 100%; height: 200px; object-fit: cover;">
       <div style="padding: 1.5rem; background: white;">
         <h3 style="color: #2a6e3f;">Reinigungsarbeiten</h3>
@@ -225,7 +222,7 @@
       </div>
     </div>
 
-    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'; this.querySelector('div').style.background='linear-gradient(135deg, #e4fbe8 0%, #ffffff 100%)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 10px rgba(0,0,0,0.05)'; this.querySelector('div').style.background='white';"">
       <img src="https://cdn.pixabay.com/photo/2022/07/01/14/29/wheat-7295718_1280.jpg" alt="Mehr" style="width: 100%; height: 200px; object-fit: cover;">
       <div style="padding: 1.5rem; background: white;">
         <h3 style="color: #2a6e3f;">…und vieles mehr!</h3>
@@ -237,6 +234,7 @@
 </section>
 
 <!-- Call-to-Action Bereich -->
+<!-- ===== Call-to-Action ===== -->
 <section style="padding: 5rem 2rem; background: #2a6e3f; color: white; text-align: center;">
   <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Bereit, loszulegen?</h2>
   <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem;">
@@ -246,14 +244,43 @@
 </section>
 
 <!-- Kontaktformular -->
+<!-- ===== Kontaktformular ===== -->
 <section id="kontakt" style="padding: 5rem 2rem; background: #fefefe;">
   <h2 style="text-align: center; color: #2a6e3f; font-size: 2.5rem; margin-bottom: 2rem;">Kontakt</h2>
-  <form style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+  <form style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;" name="kontakt" method="POST" data-netlify="true">
     <input type="text" name="name" placeholder="Dein Name" required style="padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
     <input type="email" name="email" placeholder="Deine E-Mail" required style="padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;">
     <textarea name="nachricht" placeholder="Deine Nachricht" rows="5" required style="padding: 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
-    <button type="submit" style="background: #2a6e3f; color: white; padding: 1rem; border: none; border-radius: 6px; font-size: 1rem; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;">Senden</button>
+    <label style="color: #2a6e3f; font-size: 0.9rem;">
+    <input type="checkbox" name="datenschutz" required style="margin-right: 0.5rem;">
+    Ich stimme der Verarbeitung meiner Daten gemäß der <a href="#datenschutz" style="color: #2a6e3f; text-decoration: none;">Datenschutzerklärung</a> zu.</label>
+    <button type="submit" style="background: #2a6e3f; color: white; padding: 1rem; border: none; border-radius: 6px; font-size: 1rem; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: background 0.3s ease;">Senden</button>
   </form>
 </section>
+<!-- ===== Footer ===== -->
+<footer style="background: #121d14; color: white; padding: 3rem 2rem;">
+  <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+    <div>
+      <h3 style="font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Feldliebe</h3>
+      <p>Nachhaltige Dienstleistungen für Landwirtschaft und Umwelt.</p>
+    </div>
+    <div>
+      <h4 style="font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Sitemap</h4>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li><a href="#" style="color: white; text-decoration: none;">Startseite</a></li>
+        <li><a href="#leistungen" style="color: white; text-decoration: none;">Leistungen</a></li>
+        <li><a href="#kontakt" style="color: white; text-decoration: none;">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Kontakt</h4>
+      <p>Globushaus<br>Albert-Schweitzer-Straße 51<br>38226 Salzgitter<br>Deutschland</p>
+      <p>E-Mail: <a href="mailto:info@feldliebe.de" style="color: white; text-decoration: none;">info@feldliebe.de</a></p>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: #ccc;">
+    © 2025 Feldliebe Deutschland – Alle Rechte vorbehalten.
+  </div>
+</footer>
 </body>
 </html>
